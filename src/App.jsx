@@ -1,6 +1,7 @@
-import Quote from "./Quote"
-import {useEffect,React} from 'react'
-
+import Quote from "./Quote";
+import {useEffect,React} from 'react';
+import Navbar from "./Nabar";
+import "./App.css" ;
 const  App=()=>{
   useEffect(()=>{
    const timer= setTimeout(()=>{
@@ -8,9 +9,11 @@ const  App=()=>{
     },1000);
     return()=>clearTimeout(timer);
 })
-  return <>
+  return (
+  <>
+    <Navbar/>
     <Quote/>
-  </>
+  </>)
   
 }
 

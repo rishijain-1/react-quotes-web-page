@@ -33,7 +33,7 @@ const Quote=()=>{
         <div className="container">
             <div className="content">
                 <p>{loading ? "Loading...":quote.text}</p>
-                <p className="author">-{loading ?"Author":quote.author.split(',')[0]}</p>
+                <p className="author">{loading ?" ":"-"+quote.author.split(',')[0]}</p>
             </div>
             <div className="button" onClick={()=>{getQuote()}}>click me</div>
         </div>

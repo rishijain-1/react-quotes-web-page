@@ -1,0 +1,16 @@
+.container {
+    width: -wekit-fill-required;
+
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    background-color: #0d0d0d;
+    padding: 10px;
+    margin-bottom:10px;
+}
+.content div {
+    padding: 10px 20px;
+}
