@@ -14,3 +14,19 @@
 .content div {
     padding: 10px 20px;
 }
+
+.content .red{
+    color:red;
+}
+
+.content .yellow{
+    color:yellow;
+}
+
+.content .orange{
+    color:orange;
+}
+
+.content .white{
+    color:white;
+}
