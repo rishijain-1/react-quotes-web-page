@@ -4,7 +4,7 @@ import {useEffect,React} from 'react'
 const  App=()=>{
   useEffect(()=>{
    const timer= setTimeout(()=>{
-       alert(`welcome`) 
+       alert(`Welcome To Rishi Jain Quotes Page`) 
     },1000);
     return()=>clearTimeout(timer);
 })
