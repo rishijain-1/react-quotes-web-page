@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import './Quote.css'
 
 const Quote=()=>{
-    const Quotes=[];
+    let Quotes=[];
     const [quote,setquote]= useState({
         text:"Be your own Developer",
         author:"Rishi Jain",
