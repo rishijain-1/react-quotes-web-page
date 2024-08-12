@@ -1,43 +1,38 @@
-import React,{useEffect, useState} from 'react';
-import './Quote.css'
+import React, { useState } from 'react';
+import './Quote.css';
 
-const Quote=()=>{
-    let Quotes=[];
-    const [quote,setquote]= useState({
-        text:"Be your own Developer",
-        author:"Rishi Jain",
+const Quote = ({ color }) => {
+    const [quote, setQuote] = useState({
+        text: "Be your own Developer",
+        author: "Rishi Jain",
     });
-    const [loading,setLoading] = useState(false)
-    
-  
-    const getQuote=async()=>{
-        try{
+    const [loading, setLoading] = useState(false);
+
+    const getQuote = async () => {
+        try {
             setLoading(true);
-            const url="https://type.fit/api/quotes";
-            const response=await fetch(url);
-            Quotes=await response.json();
-            const num=Math.floor(Math.random()*Quotes.length);
+            const url = "https://type.fit/api/quotes";
+            const response = await fetch(url);
+            const quotes = await response.json();
+            const num = Math.floor(Math.random() * quotes.length);
             setTimeout(() => {
-                setquote(Quotes[num]);
-                setLoading(false); 
+                setQuote(quotes[num]);
+                setLoading(false);
             }, 1000);
-        }
-        catch(error){
+        } catch (error) {
             console.log(error);
         }
-    }
-    
-    return(
-      
-        
-        <div className="container">
-            <div className="content">
-                <p>{loading ? "Loading...":quote.text}</p>
-                <p className="author">{loading ?" ":"-"+quote.author.split(',')[0]}</p>
+    };
+
+    return (
+        <div className="container" >
+            <div className="content"style={{ color: color }} > 
+                <p>{loading ? "Loading..." : quote.text}</p>
+                <p className="author">{loading ? " " : "-" + quote.author.split(',')[0]}</p>
             </div>
-            <div className="button" onClick={()=>{getQuote()}}>click me</div>
+            <div className="button" onClick={getQuote}>click me</div>
         </div>
-    )
-}
+    );
+};
 
 export default Quote;

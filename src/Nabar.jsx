@@ -1,13 +1,15 @@
-import React from "react";
-import "./assets/navbar.css";
-const Navbar = () => {
+import React from 'react';
+import './assets/navbar.css';
+
+const Navbar = ({ changeColor }) => {
     return (
         <div className="container">
+            <div> Choose The Text Color</div>
             <div className="content">
-                <div className="red">Red</div>
-                <div className="yellow">Yellow</div>
-                <div className="orange">Orange</div>
-                <div className="white">White</div>
+                <div className="red" onClick={() => changeColor('red')}>Red</div>
+                <div className="yellow" onClick={() => changeColor('yellow')}>Yellow</div>
+                <div className="orange" onClick={() => changeColor('orange')}>Orange</div>
+                <div className="white" onClick={() => changeColor('white')}>White</div>
             </div>
         </div>
     );
