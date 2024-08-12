@@ -28,7 +28,7 @@
 }
 .button{
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #358ae6;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -36,3 +36,8 @@
     transition: background-color 0.3s ease;
 }
 
+@media screen and (max-width: 380px) {
+    .content {
+        flex-direction: column;
+    }
+}

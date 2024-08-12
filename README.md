@@ -1,8 +1,23 @@
-# React + Vite
+#Get Random Quotes
+Random Quote Generator is single page website using Vite (React). This website is made for task assign to me. This website is deployed to
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Tech Stack
+Client: React
 
-Currently, two official plugins are available:
+Server: vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Run Locally
+Clone the project
+
+  git clone https://github.com/rishijain-1/react-quotes-web-page.git
+Go to the project directory
+
+  cd react-quotes-web-page
+Install dependencies
+
+  npm install
+Start the server
+
+  npm run start
+#Feedback
+If you have any feedback, please reach out to us at rishijain0652@gmail.com
