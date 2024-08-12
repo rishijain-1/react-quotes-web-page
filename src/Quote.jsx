@@ -11,15 +11,20 @@ const Quote=()=>{
     
   
     const getQuote=async()=>{
-        setLoading(true);
-        const url="https://type.fit/api/quotes";
-        const response=await fetch(url);
-        const Quotes=await response.json();
-        const num=Math.floor(Math.random()*Quotes.length);
-        setTimeout(() => {
-            setquote(Quotes[num]);
-            setLoading(false); // Set loading to false when fetching ends
-        }, 1000);
+        try{
+            setLoading(true);
+            const url="https://type.fit/api/quotes";
+            const response=await fetch(url);
+            Quotes=await response.json();
+            const num=Math.floor(Math.random()*Quotes.length);
+            setTimeout(() => {
+                setquote(Quotes[num]);
+                setLoading(false); 
+            }, 1000);
+        }
+        catch(error){
+            console.log(error);
+        }
     }
     
     return(
