@@ -8,7 +8,8 @@ const Quote=()=>{
         author:"Rishi Jain",
     });
     const [loading,setLoading] = useState(false)
-
+    
+  
     const getQuote=async()=>{
         setLoading(true);
         const url="https://type.fit/api/quotes";
